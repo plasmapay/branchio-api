@@ -1,0 +1,39 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-eslint-rules",
+    "tslint-config-airbnb"
+  ],
+  "jsRules": {},
+  "rules": {
+    "variable-name": false,
+    "align": false,
+    "max-line-length": {
+      "options": [130]
+    },
+    "quotemark": [true, "single", "jsx-double"],
+    "ter-arrow-parens": false,
+    "ban-types": [true, ["Object"], ["String"]],
+    "object-literal-sort-keys": false,
+    "object-literal-shorthand": false,
+    "no-param-reassign": false,
+    "no-empty": false,
+    "array-type": [true, "generic"],
+    "prefer-array-literal": false,
+    "member-ordering": false,
+    "no-shadowed-variable":false,
+    "no-magic-numbers": false,
+    "semicolon": [true, "always"],
+    "only-arrow-functions": [true, "allow-declarations", "allow-named-functions"],
+    "no-duplicate-variable": [true, "check-parameters"],
+    "no-unused-variable": true,
+    "ordered-imports": false,
+    "no-var-requires": false,
+    "noImplicitAny": false,
+    "no-console": false
+  },
+  "rulesDirectory": [
+    "node_modules/tslint-eslint-rules/dist/rules"
+  ]
+}

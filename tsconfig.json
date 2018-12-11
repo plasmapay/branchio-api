@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2016",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "lib": [
+      "dom",
+      "es7"
+    ],
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "types": ["reflect-metadata", "node"],
+    "allowJs": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "baseUrl": ".",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
