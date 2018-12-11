@@ -15,7 +15,7 @@
   "author": "Nick Ivlev <nikolay.kotovsky@gmail.com>",
   "scripts": {
     "build": "NODE_ENV=production tsc -p tsconfig.build.json --outDir dist",
-    "publish": "bump --prompt --tag --push --all",
+    "bump": "bump --prompt --tag --push --all",
     "lint": "tslint './src/**/*.ts'",
     "lintFix": "tslint --fix './src/**/*.ts'"
   },
