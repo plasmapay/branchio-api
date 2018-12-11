@@ -1,7 +1,7 @@
 {
   "name": "@plasmapay/branchio-api",
   "description": "Branch.io API for TypeScript",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -20,8 +20,11 @@
     "lintFix": "tslint --fix './src/**/*.ts'"
   },
   "dependencies": {
-    "options-resolver": "^1.0.1",
+    "@plasmapay/options-resolver": "^1.0.2",
     "request": "^2.87.0"
+  },
+  "deepDependencies": {
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "version-bump-prompt": "^4.1.0",
@@ -31,8 +34,7 @@
     "tslint-loader": "3.5.3",
     "ts-node": "7.0.1",
     "tsconfig-paths": "^3.6.0",
-    "typescript": "^3.1.0",
-    "lodash": ">=4.17.5"
+    "typescript": "^3.1.0"
   },
   "bugs": {
     "url": "https://github.com/plasmapay/branchio-api/issues"

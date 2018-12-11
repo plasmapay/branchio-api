@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const createResolver = require("options-resolver");
+const createResolver = require("@plasmapay/options-resolver");
 /**
  * Link
  */

@@ -1,4 +1,4 @@
-import * as createResolver from 'options-resolver';
+import * as createResolver from '@plasmapay/options-resolver';
 import { BranchIo } from '../index';
 import { IBranchIoService } from '../interfaces';
 
