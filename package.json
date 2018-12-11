@@ -1,5 +1,5 @@
 {
-  "name": "@plasma/branchio-api",
+  "name": "@plasmapay/branchio-api",
   "description": "Branch.io API for TypeScript",
   "version": "0.0.0",
   "main": "dist/index.js",
