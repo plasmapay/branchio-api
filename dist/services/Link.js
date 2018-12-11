@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const options_resolver_1 = require("options-resolver");
 /**
  * Link
  */
@@ -81,8 +82,7 @@ class Link {
      * @param requiredProps
      */
     static resolveParams(params, requiredProps) {
-        // @ts-ignore
-        const resolver = createResolver();
+        const resolver = options_resolver_1.default();
         resolver
             .setDefined('branch_key')
             .setAllowedTypes('branch_key', 'string')

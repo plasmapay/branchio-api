@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const options_resolver_1 = require("options-resolver");
 /**
  * App
  */
@@ -74,8 +75,7 @@ class App {
      * @param requiredProps
      */
     static resolveParams(params, requiredProps) {
-        // @ts-ignore
-        const resolver = createResolver();
+        const resolver = options_resolver_1.default();
         resolver
             .setDefined('user_id')
             .setAllowedTypes('user_id', 'int')
