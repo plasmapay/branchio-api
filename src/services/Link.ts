@@ -94,8 +94,7 @@ export class Link implements IBranchIoService {
    * @param requiredProps
    */
   public static resolveParams(params: any, requiredProps?: Array<any>) {
-    // @ts-ignore
-    const resolver = createResolver();
+    const resolver = optionsResolver();
 
     resolver
       .setDefined('branch_key')
