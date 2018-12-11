@@ -1,11 +1,10 @@
 {
   "name": "@plasmapay/branchio-api",
   "description": "Branch.io API for TypeScript",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "private": true,
   "engines": {
     "node": ">=10.0"
   },
@@ -16,7 +15,7 @@
   "author": "Nick Ivlev <nikolay.kotovsky@gmail.com>",
   "scripts": {
     "build": "NODE_ENV=production tsc -p tsconfig.build.json --outDir dist",
-    "publish": "./node_modules/.bin/bump --prompt --tag --push --all",
+    "publish": "bump --prompt --tag --push --all",
     "lint": "tslint './src/**/*.ts'",
     "lintFix": "tslint --fix './src/**/*.ts'"
   },
@@ -34,5 +33,13 @@
     "tsconfig-paths": "^3.6.0",
     "typescript": "^3.1.0",
     "lodash": ">=4.17.5"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/plasmapay/branchio-api/issues"
+  },
+  "homepage": "https://github.com/plasmapay/branchio-api#readme",
+  "keywords": [
+    "branch.io",
+    "api"
+  ]
 }
