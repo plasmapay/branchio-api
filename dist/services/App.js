@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const options_resolver_1 = require("options-resolver");
+const createResolver = require("options-resolver");
 /**
  * App
  */
@@ -75,10 +75,10 @@ class App {
      * @param requiredProps
      */
     static resolveParams(params, requiredProps) {
-        const resolver = options_resolver_1.default();
+        const resolver = createResolver();
         resolver
             .setDefined('user_id')
-            .setAllowedTypes('user_id', 'int')
+            .setAllowedTypes('user_id', 'number')
             .setDefined('app_name')
             .setAllowedTypes('app_name', 'string')
             .setNormalizer('app_name', (value) => {
@@ -110,7 +110,7 @@ class App {
              * Android
              */
             .setDefined('android_app')
-            .setAllowedTypes('android_app', 'int')
+            .setAllowedTypes('android_app', 'number')
             .setAllowedValues('android_app', [0, 1, 2])
             .setNormalizer('android_app', (value) => {
             if (value > 2) {
@@ -144,7 +144,7 @@ class App {
         })
             .setDefined('sha256_cert_fingerprints')
             .setDefined('android_app_links_enabled')
-            .setAllowedTypes('android_app_links_enabled', 'int')
+            .setAllowedTypes('android_app_links_enabled', 'number')
             .setAllowedValues('android_app_links_enabled', [0, 1])
             .setNormalizer('android_app_links_enabled', (value) => {
             if (value > 1) {
@@ -156,7 +156,7 @@ class App {
              * iOS
              */
             .setDefined('ios_app')
-            .setAllowedTypes('ios_app', 'int')
+            .setAllowedTypes('ios_app', 'number')
             .setAllowedValues('ios_app', [0, 1])
             .setNormalizer('ios_app', (value) => {
             if (value > 1) {
@@ -189,11 +189,11 @@ class App {
             return value;
         })
             .setDefined('ios_bundle_id')
-            .setAllowedTypes('ios_bundle_id', 'int')
+            .setAllowedTypes('ios_bundle_id', 'number')
             .setDefined('ios_team_id')
-            .setAllowedTypes('ios_team_id', 'int')
+            .setAllowedTypes('ios_team_id', 'number')
             .setDefined('universal_linking_enabled')
-            .setAllowedTypes('universal_linking_enabled', 'int')
+            .setAllowedTypes('universal_linking_enabled', 'number')
             .setAllowedValues('universal_linking_enabled', [0, 1])
             .setNormalizer('universal_linking_enabled', (value) => {
             if (value > 1) {

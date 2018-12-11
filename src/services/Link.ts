@@ -1,4 +1,4 @@
-import optionsResolver from 'options-resolver';
+import * as createResolver from 'options-resolver';
 import { BranchIo } from '../index';
 import { IBranchIoService } from '../interfaces';
 
@@ -94,7 +94,7 @@ export class Link implements IBranchIoService {
    * @param requiredProps
    */
   public static resolveParams(params: any, requiredProps?: Array<any>) {
-    const resolver = optionsResolver();
+    const resolver = createResolver();
 
     resolver
       .setDefined('branch_key')
@@ -112,7 +112,7 @@ export class Link implements IBranchIoService {
         return value;
       })
       .setDefined('type')
-      .setAllowedTypes('type', 'int')
+      .setAllowedTypes('type', 'number')
       .setNormalizer('type', (value) => {
         if (value > 2) {
           return 0;
@@ -120,7 +120,7 @@ export class Link implements IBranchIoService {
         return value;
       })
       .setDefined('duration')
-      .setAllowedTypes('duration', 'int')
+      .setAllowedTypes('duration', 'number')
       .setDefined('identity')
       .setAllowedTypes('identity', 'string')
       .setNormalizer('identity', (value) => {

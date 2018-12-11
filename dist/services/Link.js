@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const options_resolver_1 = require("options-resolver");
+const createResolver = require("options-resolver");
 /**
  * Link
  */
@@ -82,7 +82,7 @@ class Link {
      * @param requiredProps
      */
     static resolveParams(params, requiredProps) {
-        const resolver = options_resolver_1.default();
+        const resolver = createResolver();
         resolver
             .setDefined('branch_key')
             .setAllowedTypes('branch_key', 'string')
@@ -99,7 +99,7 @@ class Link {
             return value;
         })
             .setDefined('type')
-            .setAllowedTypes('type', 'int')
+            .setAllowedTypes('type', 'number')
             .setNormalizer('type', (value) => {
             if (value > 2) {
                 return 0;
@@ -107,7 +107,7 @@ class Link {
             return value;
         })
             .setDefined('duration')
-            .setAllowedTypes('duration', 'int')
+            .setAllowedTypes('duration', 'number')
             .setDefined('identity')
             .setAllowedTypes('identity', 'string')
             .setNormalizer('identity', (value) => {
